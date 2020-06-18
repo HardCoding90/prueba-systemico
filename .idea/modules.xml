@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/eureka-server/eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gateway-server/gateway-server.iml" filepath="$PROJECT_DIR$/gateway-server/gateway-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/models-factory/models-factory.iml" filepath="$PROJECT_DIR$/models-factory/models-factory.iml" />
+      <module fileurl="file://$PROJECT_DIR$/personas/personas.iml" filepath="$PROJECT_DIR$/personas/personas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/systemico-prueba.iml" filepath="$PROJECT_DIR$/.idea/systemico-prueba.iml" />
+    </modules>
+  </component>
+</project>

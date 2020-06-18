@@ -1,0 +1,23 @@
+version: "3"
+services:
+  eureka-server:
+    image: eureka-server
+    network_mode: host
+    build: eureka-server
+    restart: always
+  personas:
+    image: personas
+    network_mode: host
+    build: personas
+    restart: always
+    environment:
+      SALUDO: ${SALUDO}
+    depends_on:
+      - eureka-server
+  gateway-server:
+    image: gateway-server
+    network_mode: host
+    build: gateway-server
+    restart: always
+    depends_on:
+      - eureka-server
