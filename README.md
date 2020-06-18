@@ -1,4 +1,18 @@
 # prueba-systemico
+---------------###################################################----------------
+
+¡Hola!
+
+De antemano me permito agradecer por la oportunidad brindada, ya que esta ha sido una prueba que me he tomado muy personal,
+y parte de mí está en esta pequeña lógica que he tenido la oportunidad de compartir con ustedes.
+
+Les doy muchas gracias por la atención prestada, y esperando crecer cada día profesionalmente para brindar lo mejor de mí, y 
+aprender lo mejor de todos.
+
+Muchas gracias!!!!!!
+
+---------------###################################################----------------
+
 Prueba técnica Systemico
 
 Recursos Técnicos:
@@ -24,22 +38,12 @@ GET:
 http://localhost:9094/personas/personas/obtenerPersonas
 
 Si se requiere desplegar en un servidor remoto se reemplaza el localhost por la ip pública del equipo, siempre y cuando 
-la configuración del equipo permita realizar esta prueba.
+la configuración de seguridad del equipo permita realizar esta prueba de manera sencilla.
 
-Según los requerimientos establecidos se retorna un objeto del tipo HashMap<String, List<Person>>().
+Según los requerimientos establecidos se retorna un objeto del tipo HashMap<String, Person[]>().
 - El objeto agrupa dos listados de personas en un HashMap con la llave "male" para el listado de hombres y 
 "female" para el listado de mujeres. 
-- El listado de hombres ha sido ordenado por la edad de menor a mayor, mientras que el listado de las mujeres,
+- El array de hombres ha sido ordenado por la edad de menor a mayor, mientras que el array de las mujeres,
 ha sido ordenado de manera descendente usando el correo electrónico como referencia para el ordenado de la lista.
 
----------------###################################################----------------
-
-¡Hola!
-
-De antemano me permito agradecer por la oportunidad brindada, ya que esta ha sido una prueba que me he tomado muy personal,
-y parte de mí está en esta pequeña lógica que he tenido la oportunidad de compartir con ustedes.
-
-Les doy muchas gracias por la atención prestada, y esperando crecer cada día profesionalmente para brindar lo mejor de mí, y 
-aprender lo mejor de todos.
-
-Muchas gracias!!!!!!
+Nota: Se hace la conversión de Arraylist a Array, del listado de hombres y mujeres para cumplir con el requerimiento solicitado al indicar que deben ser arreglos de Array.
