@@ -20,6 +20,7 @@ donde la petición es realizada a través del puerto 9094 el cual está configur
 por medio de los servicios registrados en el discovery, busca y encuentra la ruta correspondiente para 
 su ejecución. El siguiente ejemplo es el API Rest correspondiente ejecutando de manera local los servicios:
 
+GET:
 http://localhost:9094/personas/personas/obtenerPersonas
 
 Si se requiere desplegar en un servidor remoto se reemplaza el localhost por la ip pública del equipo, siempre y cuando 
