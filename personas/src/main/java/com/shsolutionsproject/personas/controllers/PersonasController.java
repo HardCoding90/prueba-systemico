@@ -25,11 +25,11 @@ public class PersonasController extends BasicServices {
     String URL;
 
     @GetMapping("/obtenerPersonas")
-    public HashMap<String, List<Person>> saludoPersonas() {
+    public HashMap<String, Person[]> saludoPersonas() {
         Example apiObject = new RestTemplateBuilder().build().getForObject
                 (URL, Example.class);
         if (apiObject == null) return new HashMap<>();
-        HashMap<String, List<Person>> groupByGender = new HashMap<>();
+        HashMap<String, Person[]> groupByGender = new HashMap<>();
         List<Person> men = new ArrayList<>();
         List<Person> women = new ArrayList<>();
         apiObject.getResults().forEach(x -> {
@@ -47,12 +47,12 @@ public class PersonasController extends BasicServices {
         return groupByGender;
     }
 
-    private void addList(HashMap<String, List<Person>> groupByGender,
+    private void addList(HashMap<String, Person[]> groupByGender,
                          List<Person> men, List<Person> women){
         men.sort(Comparator.comparing(x -> x.getDob().getAge()));
         women.sort(Comparator.comparing(Person::getEmail).reversed());
-        groupByGender.put(MALE,men);
-        groupByGender.put(FEMALE,women);
+        groupByGender.put(MALE,men.toArray(new Person[0]));
+        groupByGender.put(FEMALE,women.toArray(new Person[0]));
     }
 
 }
